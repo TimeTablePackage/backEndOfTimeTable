@@ -24,6 +24,9 @@ namespace Domain
         /// A LinkedList of Courses in this Department
         /// </summary>
         private LinkedList courseList;
+
+        private Lecturer[] lecturerlist2;
+        private Course[] courseList2; 
         
         /// <summary>
         ///     Defuault Constructer

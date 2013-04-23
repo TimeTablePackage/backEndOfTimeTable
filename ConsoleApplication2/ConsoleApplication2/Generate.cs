@@ -26,10 +26,7 @@ namespace Domain
                 LinkedList roomList = tempBuild.getRoomList();
                 Node roomNode = roomList.head;
 
-                while ()
-                {
-                    
-                }
+               
             }
 
         }

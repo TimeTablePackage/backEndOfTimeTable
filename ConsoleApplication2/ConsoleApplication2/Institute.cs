@@ -21,6 +21,10 @@ namespace Domain
         /// </summary>
         private LinkedList buildingList;
 
+        private Building[] buildingLi;
+        private Department[] departmentList;
+        
+
         /// <summary>
         ///     Defualt Constructer that sets name.
         /// </summary>

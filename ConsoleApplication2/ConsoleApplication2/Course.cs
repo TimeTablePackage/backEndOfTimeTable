@@ -28,6 +28,7 @@ namespace Domain
         /// linked list of modules on the course
         /// </summary>
         private LinkedList moduleList;
+        private Module[] moduleList2;
 
         /// <summary>
         ///     Defuault Constructer

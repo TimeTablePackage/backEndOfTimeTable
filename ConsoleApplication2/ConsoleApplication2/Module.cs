@@ -42,6 +42,7 @@ namespace Domain
         /// The list of lecturers that is able to teach the Module.
         /// </summary>
         private LinkedList lecturerList;
+        private Lecturer[] lectList;
         /// <summary>
         /// Specifies the minimum hours needed by the Module each day
         /// </summary>
