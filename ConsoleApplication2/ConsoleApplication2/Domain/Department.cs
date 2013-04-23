@@ -8,24 +8,43 @@ namespace Domain
 {
     class Department
     {
-        private string ID;  // used for database
+        /// <summary>
+        /// The Id of the Department mainly used in the database
+        /// </summary>
+        private string ID;  
+        /// <summary>
+        /// The name of the Department
+        /// </summary>
         private string name;
+        /// <summary>
+        /// A LinkedList of Lecturers in this Department
+        /// </summary>
         private LinkedList lecturerList;
+        /// <summary>
+        /// A LinkedList of Courses in this Department
+        /// </summary>
         private LinkedList courseList;
         
         /// <summary>
-        ///     Default Constructer
+        ///     Defuault Constructer
+        ///     Sets Id to defualt 000 so as to know to use INSERT SQl command
+        ///     Creates a new linkedlists and assigns it to lecturerList & courseList to prevent
+        ///     trying to add to a non-existent list
         /// </summary>
         public Department()
         {
             setId("000");
             lecturerList = new LinkedList();
+            courseList = new LinkedList();
         }
 
         /// <summary>
-        ///     Constructer and set name
+        ///     Constructer that sets name
+        ///     Sets Id to defualt 000 so as to know to use INSERT SQl command
+        ///     Creates a new linkedlists and assigns it to lecturerList & courseList to prevent
+        ///     trying to add to a non-existent list
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">The name of the Department</param>
         public Department(String name)
         {
             setId("000");
@@ -35,10 +54,11 @@ namespace Domain
         }
 
         /// <summary>
-        ///     Constructer and set name, lecturer list & courseList
+        ///     Constructer that sets name, lecturer list & courseList
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="lectureList"></param>
+        /// <param name="name">The name of the Department</param>
+        /// <param name="lectureList">LinkedList Of Lecturer in for this Department</param>
+        /// <param name="courseList">LinkedList Of Course in for this Department</param>
         public Department(String name, LinkedList lectureList, LinkedList courseList)
         {
             setId("000");
@@ -46,65 +66,58 @@ namespace Domain
             setLecturerList(lectureList);
             setCourseList(courseList);
         }
-
-        //Other Methods
         /// <summary>
-        ///     Add a lecturer to this department
+        ///     Add a Lecturer to this department
         /// </summary>
-        /// <param name="lecturer"></param>
+        /// <param name="lecturer">The Lecturer to be added</param>
         public void addLecturer(Lecturer lecturer)
         {
             lecturerList.addAtTail(lecturer);
         }
         /// <summary>
-        ///     Add a course to this department
+        ///     Add a Course to this department
         /// </summary>
-        /// <param name="course"></param>
+        /// <param name="course">The Course to be added</param>
         public void addCourse(Course course)
         {
             courseList.addAtTail(course);
         }
         /// <summary>
-        /// Check if a Lecturer is in this department
+        /// Check if a Lecturer is in the lecturerist
         /// </summary>
-        /// <param name="lecturer"></param>
-        /// <returns></returns>
+        /// <param name="lecturer">The Lecturer to search for</param>
+        /// <returns>True or False</returns>
         public bool isInDept(Lecturer lecturer)
         {
             return lecturerList.searchList(lecturer);
         }
         /// <summary>
-        ///     Check if a course is in this deptartment
+        ///     Check if a Course is in this Deptartment
         /// </summary>
-        /// <param name="course"></param>
-        /// <returns></returns>
+        /// <param name="course">The Course to search for</param>
+        /// <returns>True or False</returns>
         public bool isInDept(Course course)
         {
             return courseList.searchList(course);
         }
-
-
-
-
-        //Get & Set Methods
         /// <summary>
-        ///     set the id of the lecturer
+        ///     set the id of the Departmet
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="Id">The new Id</param>
         public void setId(string Id)
         {
             this.ID = Id;
         }
         /// <summary>
-        ///     returns the id of lecturer
+        ///     returns the id of Department
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The Id of the Department</returns>
         public string getId()
         {
             return this.ID;
         }
         /// <summary>
-        ///     return the the id of the department
+        ///     Return the the id of the Department
         /// </summary>
         /// <returns></returns>
         public string getID()
@@ -112,17 +125,17 @@ namespace Domain
             return this.ID;
         }
         /// <summary>
-        ///     Set course name
+        ///     Set Department name
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">The new name</param>
         public void setName(string name)
         {
             this.name = name;
         }
         /// <summary>
-        ///     Get the course name
+        ///     Get the Department name
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The Department name</returns>
         public string getName()
         {
             return this.name;
@@ -130,7 +143,7 @@ namespace Domain
         /// <summary>
         ///     Set the Lecturer for this Department
         /// </summary>
-        /// <param name="lecturerList"></param>
+        /// <param name="lecturerList">The LinkedList Of Lecturer</param>
         public void setLecturerList(LinkedList lecturerList)
         {
             this.lecturerList = lecturerList;
@@ -138,15 +151,15 @@ namespace Domain
         /// <summary>
         ///     Get the Lecturer for this Department
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The LinkedList Of Lecturer</returns>
         public LinkedList getLecturerList()
         {
             return this.lecturerList;
         }
         /// <summary>
-        ///     Set the courses in this department
+        ///     Set the Courses in this department
         /// </summary>
-        /// <param name="courseList"></param>
+        /// <param name="courseList">The LinkedList of Course</param>
         public void setCourseList(LinkedList courseList)
         {
             this.courseList = courseList;
@@ -154,7 +167,7 @@ namespace Domain
         /// <summary>
         ///     Get the list of courses in this department
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The LinkedList of Course</returns>
         public LinkedList getCourseList()
         {
             return this.courseList;

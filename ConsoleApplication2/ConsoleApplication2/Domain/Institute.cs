@@ -8,18 +8,31 @@ namespace Domain
 {
     class Institute
     {
+        /// <summary>
+        /// The Name of the Instuite
+        /// </summary>
         private string name;
+        /// <summary>
+        /// The LinkedList of Department in the Institute
+        /// </summary>
         private LinkedList deptList;
+        /// <summary>
+        /// The LinkedList of Building in the Institute
+        /// </summary>
         private LinkedList buildingList;
 
+        /// <summary>
+        ///     Defualt Constructer that sets name.
+        /// </summary>
+        /// <param name="name">the Name</param>
         public Institute(string name)
         {
+            setName(name);
         }
-
         /// <summary>
-        ///     add a building to the instutite
+        ///     add a Building to the Instutite
         /// </summary>
-        /// <param name="building"></param>
+        /// <param name="building">The Building to add</param>
         public void addBuilding(Building building)
         {
             if (buildingList == null)
@@ -29,9 +42,9 @@ namespace Domain
             buildingList.addAtTail(building);
         }
         /// <summary>
-        ///     add a department to the instutite
+        ///     Add a Department to the Instutite
         /// </summary>
-        /// <param name="dept"></param>
+        /// <param name="dept">The Department to add</param>
         public void addDepartment(Department dept)
         {
             if (deptList == null)
@@ -42,49 +55,49 @@ namespace Domain
         }
         //Get and Set methods
         /// <summary>
-        ///     set the institute name
+        ///     Set the Institute name
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">The new Name</param>
         public void setName(string name)
         {
             this.name = name;
         }
         /// <summary>
-        ///     get the institute name
+        ///     Get the Institute name
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The Institute name</returns>
         public string getName()
         {
             return this.name;
         }
         /// <summary>
-        ///     set the building list
+        ///     Set the Building LinkedList
         /// </summary>
-        /// <param name="buildingList"></param>
+        /// <param name="buildingList">The LinkedList Of Building</param>
         public void setBuildingList(LinkedList buildingList)
         {
             this.buildingList = buildingList;
         }
         /// <summary>
-        ///     get the building list
+        ///     Get the Building LinkedList
         /// </summary>
-        /// <returns></returns>
+        /// <returns>LinkedList of Building</returns>
         public LinkedList getBuildingList()
         {
             return this.buildingList;
         }
         /// <summary>
-        ///     set the department list
+        ///     Set the Department LinkedList
         /// </summary>
-        /// <param name="deptList"></param>
+        /// <param name="deptList">The LinkedList of Department</param>
         public void setDeptList(LinkedList deptList)
         {
             this.deptList = deptList;
         }
         /// <summary>
-        ///     get the department list
+        ///     Get the Department LinkedList
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The LinkedList of Department</returns>
         public LinkedList getDeptList()
         {
             return this.deptList;
