@@ -8,10 +8,16 @@ namespace Domain
 {
     class Node
     {
+        /// <summary>
+        /// The data part of the linked list contains information about object.
+        /// </summary>
         public object data;
+        /// <summary>
+        /// The link part of the linked list contains information for the next link in the LinkedList.
+        /// </summary>
         public Node next;
         /// <summary>
-        ///     Create a new node 
+        ///     The method creates a new node in the LinkedList. 
         /// </summary>
         /// <param name="o"></param>
         public Node(object data)
@@ -37,7 +43,7 @@ namespace Domain
         /// <summary>
         ///     Adds an object to tail of the list
         /// </summary>
-        /// <param name="newNode"></param>
+        /// <param name="newNode">The object that will be inserted to the Tail of the LinkedList</param>
         public void addAtTail(object newNode)
         {
             Node temp = head;
@@ -58,8 +64,8 @@ namespace Domain
         /// <summary>
         ///     Search the list for an object
         /// </summary>
-        /// <param name="searchTerm"></param>
-        /// <returns></returns>
+        /// <param name="searchTerm">Search Criteria</param>
+        /// <returns>Boolean</returns>
         public bool searchList(object searchTerm)
         {
             Node temp = head;
@@ -75,9 +81,9 @@ namespace Domain
             return answer;
         }
         /// <summary>
-        ///     Delete a node from the list
+        ///     The method deletes a node from the LinkedList.
         /// </summary>
-        /// <param name="toBeDeleted"></param>
+        /// <param name="toBeDeleted">The object that will be deleted</param>
         public void delete(object toBeDeleted)
         {
             Node temp = head;
@@ -86,8 +92,7 @@ namespace Domain
         }
 
         /// <summary>
-        ///     Prints list out to standard output
-        ///     really only for testing or strings
+        ///     The method prints list out to standard output, only for testing purposes and strings.
         /// </summary>
         public void printList()
         {

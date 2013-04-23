@@ -42,6 +42,10 @@ namespace Domain
         /// The list of lecturers that is able to teach the Module.
         /// </summary>
         private LinkedList lecturerList;
+        /// <summary>
+        /// Specifies the minimum hours needed by the Module each day
+        /// </summary>
+        private int  minSlotsPerDay ;
 
         /// <summary>
         ///  This method constructs a new Module object without setting any properties.
@@ -103,149 +107,161 @@ namespace Domain
 
         //Get & Set Method
         /// <summary>
-        ///     set the Id the
+        ///   The string value received by the method is assigned as the Module ID.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">String value which contains Module ID</param>
         public void setId(string id)
         {
             this.ID = id;
         }
         /// <summary>
-        ///     return the Id the Building
+        ///   The method returns the ID of the Module
         /// </summary>
-        /// <returns>gfg</returns>
+        /// <returns>String</returns>
         public string getID()
         {
             return this.ID;
         }
         /// <summary>
-        ///     set Name
+        ///    The parameter received by the method is assigned as the name of the Module
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">Module Name</param>
         public void setName(string s)
         {
             this.name = s;
         }
         /// <summary>
-        ///     get Name
+        ///     The method retreived the name of the Module object and returns it.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String</returns>
         public string getName()
         {
             return this.name;
         }
         /// <summary>
-        ///     set if module is Practical
+        ///    The parameter received by the method is used to define whether module has a practical.
         /// </summary>
-        /// <param name="practical"></param>
+        /// <param name="practical">Boolean value to define whether Module is practical or not.</param>
         public void setPractical(bool b)
         {
             this.practical = b;
         }
         /// <summary>
-        ///     get if module is Practical
+        ///    The method retrieves the Module object and return user whether Module is practical or not.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Boolean</returns>
         public bool getPractical()
         {
             return this.practical;
         }
         /// <summary>
-        ///     set Hours Per Week
+        ///     The parameter received by the method is set as the number of hours that Module will be taught.
         /// </summary>
-        /// <param name="HoursPerWeek"></param>
+        /// <param name="HoursPerWeek">Integer value for number of hours</param>
         public void setHoursPerWeek(int i)
         {
             this.hoursPerWeek = i;
         }
         /// <summary>
-        ///     get Hours Per Week
+        ///     The method retrieves the Module object and return user the number of hours Module is taught each week.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Integer</returns>
         public int getHoursPerWeek()
         {
             return this.hoursPerWeek;
         }
         /// <summary>
-        ///     set Room Type needed
+        ///     The parameter received by this method sets the Room type needed by the Module.
         /// </summary>
-        /// <param name="s"></param>
+        /// <param name="s">String value with relevant information</param>
         public void setRoomtype(string s)
         {
             this.RoomType = s;
         }
         /// <summary>
-        ///     get Room Type needed
+        ///     The method retrieves the Module object and return user the room type needed by the Module.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String</returns>
         public string getRommType()
         {
             return this.RoomType;
         }
         /// <summary>
-        ///     set if Double Slots needed
+        ///     The parameters received by the method defines whether double slots are needed for the Module.
         /// </summary>
-        /// <param name="doubleSlots"></param>
+        /// <param name="doubleSlots">Boolean Value</param>
         public void setDoubleSlots(bool b)
         {
             this.doubleSlots = b;
         }
         /// <summary>
-        ///     get if Double Slots needed
+        ///      The method retrieves the Module object and returns whether double slots are needed for the Module.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Boolean</returns>
         public bool getDoubleSlots()
         {
             return this.doubleSlots;
         }
         /// <summary>
-        ///     set Max Consectuive Hours
+        ///     The parameters received by the method will be used for setting the maximum number of consecutive hours for Module in a day.
         /// </summary>
-        /// <param name="maxConsecHours"></param>
+        /// <param name="maxConsecHours">Integer value for the maximum number of consecutive hours for the Module</param>
         public void setMaxConsecHours(int i)
         {
             this.maxConsecHours = i;
         }
         /// <summary>
-        ///     get Max Consectuive Hours
+        ///     The method retrieves the Module object and returns user the maximum number of consecutive hours allowed for the Module.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Integer</returns>
         public int getMaxConsecHours()
         {
             return this.maxConsecHours;
         }
         /// <summary>
-        ///     set Minimum Slots per Day
+        ///     The parameter received by the method is assigned as the minimum hours required by the Module during the day.
         /// </summary>
         /// <param name="i"></param>
         /// <summary>
-        ///     set Time Slots Off
+        public void setMinSlotsPerDay(int i)
+        {
+            this.minSlotsPerDay = i;
+        }
+        /// <summary>
+        /// The method returns the minimum number of hours required by the Lecture each day
         /// </summary>
-        /// <param name="slotsOff"></param>
+        /// <returns>Integer</returns>
+        public int getMinSlotsPerday()
+        {
+            return this.minSlotsPerDay;
+        }
+        ///    The parameters received by the method defines the timeslots that the Module can not be taught.
+        /// </summary>
+        /// <param name="slotsOff">String value for Module slots off</param>
         public void setSlotsOff(string s)
         {
             this.slotsOff = s;
         }
         /// <summary>
-        ///     get Time Slots Off
+        ///    The method returns the time slots that a Module can not be taught.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String</returns>
         public string getSlotsOff()
         {
             return this.slotsOff;
         }
         /// <summary>
-        ///     Set the Lecturer for this Department
+        ///    The parameter received by the method specifies the lecturer that can teach this Module.
         /// </summary>
-        /// <param name="lecturerList"></param>
+        /// <param name="lecturerList">A lecturer from a list of Lecturers in LinkedList</param>
         public void setLecturerList(LinkedList lecturerList)
         {
             this.lecturerList = lecturerList;
         }
         /// <summary>
-        ///     Get the Lecturer for this Department
+        ///   The method returns the Lecturer(s) assigned to teach this Module.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>LinkedList</returns>
         public LinkedList getLecturerList()
         {
             return this.lecturerList;

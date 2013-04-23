@@ -8,23 +8,30 @@ namespace Domain
 {
     class Lesson
     {
+        /// <summary>
+        /// The lecturer details that teaches the Lesson.
+        /// </summary>
         private Lecturer lecturer;
+        /// <summary>
+        /// The Module details that the Lesson will take place for.
+        /// </summary>
         private Module module;
+        // The room details about where the Lesson will take place.
         private Room room;
 
         /// <summary>
-        ///     Defualt constructer
+        ///     The default constructor of the Lesson object.
         /// </summary>
         public Lesson()
         {
         }
         
         /// <summary>
-        ///     Constructer & set properties
+        ///     The constructor of Lesson object with a set of properties.
         /// </summary>
-        /// <param name="lecturer"></param>
-        /// <param name="module"></param>
-        /// <param name="room"></param>
+        /// <param name="lecturer">The name of the Lecturer</param>
+        /// <param name="module">The name of the Module</param>
+        /// <param name="room">The name/number of the Room</param>
         public Lesson(Lecturer lecturer, Module module, Room room)
         {
             setLecturer(lecturer);
@@ -34,7 +41,7 @@ namespace Domain
 
         //Get and Set methods
         /// <summary>
-        ///     Set the lecturer for this lesson
+        ///     The parameter received by the method is used for setting the Lecturer for this Lesson
         /// </summary>
         /// <param name="lecturer"></param>
         public void setLecturer(Lecturer lecturer)
@@ -42,41 +49,41 @@ namespace Domain
             this.lecturer = lecturer;
         }
         /// <summary>
-        ///     Get the lecturer for this lesson
+        ///     The method retreives data from Lecturer object and gives detail of the lecturer giving the Lesson. 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Lecturer Object</returns>
         public Lecturer getLecturer()
         {
             return this.lecturer;
         }
         /// <summary>
-        ///     set the module for this lesson
+        ///     The parameters received will be used for assigning the Module for this Lesson.
         /// </summary>
-        /// <param name="module"></param>
+        /// <param name="module">Module details</param>
         public void setModule(Module module)
         {
             this.module = module;
         }
         /// <summary>
-        ///     get the module of the lesson
+        ///     The method returns the details of the Module for this Lesson.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Module object</returns>
         public Module getModule()
         {
             return this.module;
         }
         /// <summary>
-        ///     set the room for this lesson
+        ///     The parameter received will used for setting the room for the Lesson.
         /// </summary>
-        /// <param name="room"></param>
+        /// <param name="room">Room details</param>
         public void setRoom(Room room)
         {
             this.room = room;
         }
         /// <summary>
-        ///     get the room for this lesson
+        ///     The method retrieves Room object and returns the room assigned for the Lesson.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Room Object</returns>
         public Room getRoom()
         {
             return this.room;
