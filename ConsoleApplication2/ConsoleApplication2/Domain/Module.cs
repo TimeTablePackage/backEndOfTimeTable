@@ -8,18 +8,43 @@ namespace Domain
 {
     class Module
     {
+        /// <summary>
+        /// ID will be used for identifying the  Module in the database.
+        /// </summary>
         private string ID;
+        /// <summary>
+        /// Name of the module.
+        /// </summary>
         private string name;
+        /// <summary>
+        /// Boolean value specifies whether Module has a practical lecture or not.
+        /// </summary>
         private bool practical;
+        /// <summary>
+        /// The number of hours per week that the Module will be taught.
+        /// </summary>
         private int hoursPerWeek;
+        /// <summary>
+        /// The room type that is required by the Module for the classes.
+        /// </summary>
         private string RoomType;
+        /// <summary>
+        /// Specifies whether the Module can have double lectures or not.
+        /// </summary>
         private bool doubleSlots;
+        /// <summary>
+        /// Specifies the maximum consecutive hours that the Module can be taught during the day.
+        /// </summary>
         private int maxConsecHours;
+        // The periods of time that the Module can not be taught.
         private string slotsOff;
+        /// <summary>
+        /// The list of lecturers that is able to teach the Module.
+        /// </summary>
         private LinkedList lecturerList;
 
         /// <summary>
-        ///     Construct new object without setting properties
+        ///  This method constructs a new Module object without setting any properties.
         /// </summary>
         public Module()
         {
@@ -28,15 +53,15 @@ namespace Domain
         }
 
         /// <summary>
-        ///     Construct new object and set properties
+        ///  This method constructs a new Module object with relevant properties.
         /// </summary>
-        /// <param name="name">jyfjh</param>
-        /// <param name="pratical"></param>
-        /// <param name="hoursPerWeek"></param>
-        /// <param name="roomType"></param>
-        /// <param name="doubleSlots"></param>
-        /// <param name="maxConsecHours"></param>
-        /// <param name="slotsOff"></param>
+        /// <param name="name">String value will be assigned as the name of the Module</param>
+        /// <param name="pratical">Boolean value specifies whether Module have a practical or not</param>
+        /// <param name="hoursPerWeek">Integer value will be assigned as the number of hours the Module will be taught.</param>
+        /// <param name="roomType">String value contains information about the Room type required for the Module</param>
+        /// <param name="doubleSlots">Boolean value specifies wheter double lectures are allowed for the Module</param>
+        /// <param name="maxConsecHours">Integer value will define the maximum consecutive hours during the day.</param>
+        /// <param name="slotsOff">String value contains information about timeslots that the Module can not be taught</param>
         public Module(String name, bool pratical, int hoursPerWeek, string roomType, bool doubleSlots, int maxConsecHours, string slotsOff)
         {
             setId("000");
@@ -50,16 +75,16 @@ namespace Domain
 
         }
         /// <summary>
-        ///     Construct new object and set properties
+        ///     This method constructs a Module object with a set of properties as well as a List of Lecturers.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="pratical"></param>
-        /// <param name="hoursPerWeek"></param>
-        /// <param name="roomType"></param>
-        /// <param name="doubleSlots"></param>
-        /// <param name="maxConsecHours"></param>
-        /// <param name="slotsOff"></param>
-        /// <param name="lecturerList"></param>
+        /// <param name="name">String value will be assigned as the name of the Module</param>
+        /// <param name="pratical">Boolean value specifies whether Module have a practical or not</param>
+        /// <param name="hoursPerWeek">Integer value will be assigned as the number of hours the Module will be taught.</param>
+        /// <param name="roomType">String value contains information about the Room type required for the Module</param>
+        /// <param name="doubleSlots">Boolean value specifies wheter double lectures are allowed for the Module</param>
+        /// <param name="maxConsecHours">Integer value will define the maximum consecutive hours during the day.</param>
+        /// <param name="slotsOff">String value contains information about timeslots that the Module can not be taught</param>
+        /// <param name="lecturerList">LinkedList with a List of Lecturers</param>
         public Module(String name, bool pratical, int hoursPerWeek, string roomType, bool doubleSlots, int maxConsecHours, string slotsOff, LinkedList lecturerList)
         {
             setId("000");

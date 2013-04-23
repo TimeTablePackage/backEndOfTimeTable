@@ -39,8 +39,8 @@ namespace Domain
         /// <summary>
         /// The class constructor sets the properties for the room object.
         /// </summary>
-        /// <param name="roomNum"></param>
-        /// <param name="capacity"></param>
+        /// <param name="roomNum">String value for the name/number of the room in the building.</param>
+        /// <param name="capacity">Integer value for the setting the maximum capacity.</param>
         public Room(string roomNum, int capacity)
         {
             setID("000");
@@ -60,7 +60,7 @@ namespace Domain
         /// <summary>
         ///  This method retreives the ID of the room in the database and return it to user.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String</returns>
         public string getID()
         {
             return this.ID;
@@ -68,7 +68,7 @@ namespace Domain
         /// <summary>
         ///  The parameter reveived by this method is assigned as the Room Number in the Room object.
         /// </summary>
-        /// <param name="roomNumber"></param>
+        /// <param name="roomNumber">String value for the name/number of the room in the building.</param>
         public void setRoomNumber(String roomNumber)
         {
             this.roomNumber = roomNumber;
@@ -84,7 +84,7 @@ namespace Domain
         /// <summary>
         ///  The integer parameter received by this method is set as the maximum capacity of the room.
         /// </summary>
-        /// <param name="capacity"></param>
+        /// <param name="capacity">Maximum number of people that a room host.</param>
         public void setCapacity(int capacity)
         {
             this.capacity = capacity;
@@ -92,15 +92,15 @@ namespace Domain
         /// <summary>
         ///   This methods retrieves the room capacity of the room object and returns it to user.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Integer</returns>
         public int getCapacity()
         {
             return this.capacity;
         }
         /// <summary>
-        ///    The string parameter received by this method is set as the room type. i.e. "Lab","Lecture Hall".
+        ///    The string parameter received by this method is set as the room type.
         /// </summary>
-        /// <param name="roomType"></param>
+        /// <param name="roomType">Room Type i.e. "Lab","Lecture Hall"</param>
         public void setRoomType(string roomType)
         {
             this.roomType = roomType;
@@ -108,7 +108,7 @@ namespace Domain
         /// <summary>
         ///    This method retrieves the room type of the room object and returns it to user.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String</returns>
         public string getRoomType()
         {
             return this.roomType;
@@ -116,7 +116,7 @@ namespace Domain
         /// <summary>
         ///    The string parameter received by this method specifies the different time slots that the room is not available.
         /// </summary>
-        /// <param name="s"></param>
+        /// <param name="s">String that holds the information for timeslots that are room is not available.</param>
         public void setSlotsOff(string s)
         {
             this.slotsOff = s;
@@ -124,7 +124,7 @@ namespace Domain
         /// <summary>
         /// This method retreives the room object and returns the user timeslots that a room is not available.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String</returns>
         public string getSlotsOff()
         {
             return this.slotsOff;
