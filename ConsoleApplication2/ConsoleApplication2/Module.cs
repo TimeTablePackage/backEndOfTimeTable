@@ -44,9 +44,9 @@ namespace Domain
         private LinkedList lecturerList;
         private Lecturer[] lectList;
         /// <summary>
-        /// Specifies the minimum hours needed by the Module each day
-        /// </summary>
-        private int  minSlotsPerDay ;
+       /// /// Specifies the minimum hours needed by the Module each day
+      ///  /// </summary>
+      ///  private int  minSlotsPerDay ;
 
         /// <summary>
         ///  This method constructs a new Module object without setting any properties.
@@ -224,18 +224,18 @@ namespace Domain
         /// </summary>
         /// <param name="i"></param>
         /// <summary>
-        public void setMinSlotsPerDay(int i)
-        {
-            this.minSlotsPerDay = i;
-        }
+     //   public void setMinSlotsPerDay(int i)
+    //    {
+    //        this.minSlotsPerDay = i;
+     //   }
         /// <summary>
         /// The method returns the minimum number of hours required by the Lecture each day
         /// </summary>
         /// <returns>Integer</returns>
-        public int getMinSlotsPerday()
-        {
-            return this.minSlotsPerDay;
-        }
+   //     public int getMinSlotsPerday()
+     //   {
+   //         return this.minSlotsPerDay;
+   //     }
         ///    The parameters received by the method defines the timeslots that the Module can not be taught.
         /// </summary>
         /// <param name="slotsOff">String value for Module slots off</param>
