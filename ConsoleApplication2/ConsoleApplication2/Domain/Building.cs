@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,6 @@ namespace Domain
         ///     Creates a new linkedlist and assigns it to roomlist to prevent addRoom() 
         ///     trying to add to a non-existent list
         /// </summary>
-        private Room[] roomList2; 
         public Building()
         {
             setId("000");

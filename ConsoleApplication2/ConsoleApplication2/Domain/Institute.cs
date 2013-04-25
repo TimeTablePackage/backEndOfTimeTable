@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,6 @@ namespace Domain
         /// The LinkedList of Building in the Institute
         /// </summary>
         private LinkedList buildingList;
-
-        private Building[] buildingLi;
-        private Department[] departmentList;
         
 
         /// <summary>
@@ -106,5 +104,29 @@ namespace Domain
         {
             return this.deptList;
         }
-    }
+        /// <summary>
+        /// Return a Department with a given Id
+        /// </summary>
+        /// <param name="Id">The Id of desired Department</param>
+        /// <returns>Department with given Id</returns>
+        public Department getDeptById(string Id)
+        {
+            Department tempdept = null;
+            Node deptNode = this.deptList.head;
+            while (deptNode != null)
+            {
+                tempdept = (Department)deptNode.data;
+                if (tempdept.getID() == Id)
+                {
+                    deptNode = null;
+                }
+                else
+                {
+                    deptNode = deptNode.next;
+                }
+            }
+            return tempdept;
+        }
+
+    }//class
 }

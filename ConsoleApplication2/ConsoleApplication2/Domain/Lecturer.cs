@@ -93,6 +93,26 @@ namespace Domain
         }
 
         //other methods
+        /// <summary>
+        ///    Update the values in the Lecturer
+        /// </summary>
+        /// <param name="name">String value for the name of lecturer</param>
+        /// <param name="initials">String value for the initials of lecturer</param>
+        /// <param name="email">String value for email details</param>
+        /// <param name="maxHours">Integer value for Maximum number of hours during the week</param>
+        /// <param name="maxConsecHours">Integer value for maximum consecutive hours a lecturer can teach</param>
+        /// <param name="minSlotsPerDay">Integer value for the minimum amount of hours that a Lecturer can teach.</param>
+        /// <param name="slotsOff">String value for the time slots that a lecturer is not available.</param>
+        public void update(string name, string initials, string email, int maxHours, int maxConsecHours, int minSlotsPerDay, string slotsOff)
+        {
+            setName(name);
+            setInitials(initials);
+            setEmail(email);
+            setMaxHours(maxHours);
+            setMaxConsecHours(maxConsecHours);
+            setMinSlotsPerDay(minSlotsPerDay);
+            setSlotsOff(slotsOff);
+        }
 
         //Get & set methods
         /// <summary>

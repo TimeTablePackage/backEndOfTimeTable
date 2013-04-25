@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,8 +29,6 @@ namespace Domain
         /// linked list of modules on the course
         /// </summary>
         private LinkedList moduleList;
-        private Module[] moduleList2;
-
         /// <summary>
         ///     Defuault Constructer
         ///     Sets Id to defualt 000 so as to know to use INSERT SQl command

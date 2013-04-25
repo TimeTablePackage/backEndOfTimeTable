@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain
+namespace Services
 {
-    class Node
+    public class Node
     {
         /// <summary>
-        /// The data part of the linked list contains information about object.
+        ///     The data part of the linked list contains information about object.
         /// </summary>
         public object data;
         /// <summary>
-        /// The link part of the linked list contains information for the next link in the LinkedList.
+        ///     The link part of the linked list contains information for the next link in the LinkedList.
         /// </summary>
         public Node next;
+
         /// <summary>
         ///     The method creates a new node in the LinkedList. 
         /// </summary>
@@ -26,10 +27,14 @@ namespace Domain
         }
     }
 
-    class LinkedList
+    public class LinkedList
     {
         //head of the list all other nodes accessed via this
         public Node head;
+        private int lenght = 0;
+
+        public LinkedList() { }
+        
         /// <summary>
         ///     Adds an object to the head of the list
         /// </summary>
@@ -39,6 +44,7 @@ namespace Domain
            Node temp = new Node(newNode);
            temp.next = head;
            head = temp;
+           lenght++;
         }
         /// <summary>
         ///     Adds an object to tail of the list
@@ -60,6 +66,7 @@ namespace Domain
        
                 temp.next = new Node(newNode);
             }
+            lenght++;
         }
         /// <summary>
         ///     Search the list for an object
@@ -89,8 +96,8 @@ namespace Domain
             Node temp = head;
             while (((temp = temp.next) != null) && !(toBeDeleted.Equals(temp.next.data))) ;
             temp.next = temp.next.next;
+            lenght--;
         }
-
         /// <summary>
         ///     The method prints list out to standard output, only for testing purposes and strings.
         /// </summary>
@@ -103,6 +110,37 @@ namespace Domain
             {
                 Console.Write(temp.data.ToString()+"\n");
             }
+        }
+        /// <summary>
+        ///     Overide the + operator so it add two list together
+        /// </summary>
+        /// <param name="lst1">First List</param>
+        /// <param name="lst2">Second List</param>
+        /// <returns>New First List with Second added on</returns>
+        public static LinkedList operator +(LinkedList lst1, LinkedList lst2)
+        {
+            Node temp = lst1.head;
+            if (temp == null)
+            {
+                lst1.head = lst2.head;
+            }
+            else
+            {
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = lst2.head;
+            }
+            return lst1;
+        }
+        /// <summary>
+        /// return the lenght of list i.e. number of objects in list
+        /// </summary>
+        /// <returns>number of objects in list</returns>
+        public int getLenght()
+        {
+            return this.lenght;
         }
     }
 }
